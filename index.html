@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Draw an S</title>
+		<style>
+			canvas {
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="900" height="900"></canvas>
+		<button onclick="resetCanvas()">Reset</button>
+		<button onclick="toggleEraser()">Toggle Eraser</button>
+		<button onclick="saveCanvas()">Save as PNG</button>
+		<button onclick="addToCanvasArray()">Add to Array</button>
+		<button onclick="clearCanvasArray()">Clear Array</button>
+		<button onclick="drawEdgePixels()">Draw Edge Pixels</button>
+		<button onclick="animateCanvasArray()">Animate Canvases</button>
+		<button onclick="exportToJson()">Export to JSON</button>
+		<label for="cellSize">Select cell size:</label>
+		<select id="cellSize">
+			<option value="10">10px</option>
+			<option value="20">20px</option>
+			<option value="30" selected>30px</option>
+			<option value="40">40px</option>
+			<option value="50">50px</option>
+			<option value="60">60px</option>
+			<option value="70">70px</option>
+			<option value="80">80px</option>
+			<option value="90">90px</option>
+		</select>
+		<button onclick="loadLatestCanvas()">Load Latest Canvas</button>
+
+		<input type="file" id="importJson" onchange="importFromJson(event)" />
+		<button onclick="animateCanvasArraySideBySide()">
+			Animate Side by Side
+		</button>
+		<button onclick="exportAllCanvases()">Export All Canvases</button>
+
+		<script src="/main.js"></script>
+	</body>
+</html>
